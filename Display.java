@@ -1,0 +1,5 @@
+interface Display {
+  log();
+
+  print();
+}
