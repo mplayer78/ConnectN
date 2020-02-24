@@ -1,9 +1,7 @@
 class HumanUser extends User {
-  public takeTurn(){
-    // do turn logic
-  }
 
-  private getInput(){
-    // user input logic
+  @Override
+  public void takeTurn(Board board, int turnValue) {
+    // do turn logic
   }
 }

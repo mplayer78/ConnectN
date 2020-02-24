@@ -1,14 +1,18 @@
 class ConsoleDisplay implements Display {
 
-  public static log(String s){
+  // todo : Singleton pattern.
+  public void ConsoleDisplay() {
+  };
+
+  public void log(String s) {
     System.out.println(s);
   }
 
-  public static log(Integer i){
+  public void log(Integer i) {
     System.out.println(i);
   }
 
-  public static print(int[] boardState){
+  public void print(int[] boardState) {
     // print out the board state
   }
 }

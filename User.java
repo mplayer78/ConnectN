@@ -1,20 +1,17 @@
 import java.io.*;
 
-import jdk.internal.org.jline.utils.InputStreamReader;
-
 abstract class User {
-  public User() {
-  };
 
   public static String getInput() {
-    try (BufferedReader br = new BufferedReader(new InputStreamReader(userInput))) {
+    String inputString;
+    try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
       // grab input
-      String inputString = userInput.readLine();
+      inputString = br.readLine();
       return inputString;
     } catch (IOException e) {
-      ConsoleDisplay.log(e.getMessage())
+      ConsoleDisplay.log(e.getMessage());
     }
   };
 
-  abstract takeTurn();
+  abstract void takeTurn(Board board, int turnValue);
 }

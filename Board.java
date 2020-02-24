@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Board {
   // define these as constants for extensibility
   final static int BOARD_WIDTH = 7;
@@ -5,16 +7,19 @@ class Board {
 
   int[] boardState;
 
-  public Board() {
-    // initialise board & fill with empty spaces.
+  public void Board() {
+    this.boardState = new int[BOARD_WIDTH * BOARD_HEIGHT];
+    Arrays.fill(this.boardState, 0);
   }
 
-  public getBoardState(){
+  public int[] getBoardState() {
     // return the board's state including all empty spaces
+    return boardState;
   }
 
-  public getFreeSpaces(){
-    // return a list of positions which can be taken.
+  public int[] getFreeSpaces() {
+    // todo return a list of positions which can be taken.
+    return boardState;
   }
 
 }

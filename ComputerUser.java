@@ -1,5 +1,7 @@
 class ComputerUser extends User {
-  public takeTurn(){
+
+  @Override
+  public void takeTurn(Board board, int turnValue) {
     // logic involved in making decision about where to go
   }
 }

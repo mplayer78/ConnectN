@@ -1,5 +1,7 @@
 interface Display {
-  log();
+  void log(String s);
 
-  print();
+  void log(Integer i);
+
+  void print(int[] boardState);
 }
